@@ -16,3 +16,10 @@ fetchAuthors()
     </p>
   </div>
 </template>
+
+<style scoped>
+  div {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+</style>

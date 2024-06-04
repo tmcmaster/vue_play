@@ -19,3 +19,13 @@ fetchPosts()
     </p>
   </main>
 </template>
+
+<style scoped>
+  main {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  main p {
+    max-width: 600px;
+  }
+</style>

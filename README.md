@@ -13,7 +13,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ## Tutorial
 
 Initial tutorial that was followed:
-https://blog.logrocket.com/complex-vue-3-state-management-pinia/#creating-posts-view
+https://blog.logrocket.com/complex-vue-3-state-management-pinia/
 
 ## Project Setup
 
