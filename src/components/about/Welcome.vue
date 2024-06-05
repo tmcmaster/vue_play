@@ -11,7 +11,7 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
   <main>
     <WelcomeItem>
       <template #icon>
-        <DocumentationIcon />
+        <DocumentationIcon/>
       </template>
       <template #heading>Documentation</template>
 
@@ -22,7 +22,7 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
 
     <WelcomeItem>
       <template #icon>
-        <ToolingIcon />
+        <ToolingIcon/>
       </template>
       <template #heading>Tooling</template>
 
@@ -37,14 +37,14 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
       >Cypress Component Testing</a
       >.
 
-      <br />
+      <br/>
 
       More instructions are available in <code>README.md</code>.
     </WelcomeItem>
 
     <WelcomeItem>
       <template #icon>
-        <EcosystemIcon />
+        <EcosystemIcon/>
       </template>
       <template #heading>Ecosystem</template>
 
@@ -60,7 +60,7 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
 
     <WelcomeItem>
       <template #icon>
-        <CommunityIcon />
+        <CommunityIcon/>
       </template>
       <template #heading>Community</template>
 
@@ -78,7 +78,7 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
 
     <WelcomeItem>
       <template #icon>
-        <SupportIcon />
+        <SupportIcon/>
       </template>
       <template #heading>Support Vue</template>
 
@@ -90,7 +90,15 @@ import SupportIcon from '@/components/about/icons/IconSupport.vue'
 </template>
 
 <style scoped>
-  main {
+main > * {
+  margin: 2rem;
+}
 
-  }
+main > :first-child {
+  margin-top: 0;
+}
+
+main {
+  padding: -1rem 1rem 1rem 1rem;
+}
 </style>

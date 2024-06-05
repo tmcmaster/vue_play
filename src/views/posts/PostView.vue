@@ -1,15 +1,15 @@
 <script setup>
-import { useRoute } from 'vue-router'
-import { storeToRefs } from 'pinia'
-import { useAuthorStore } from '@/stores/posts/author.js'
-import { usePostStore } from '@/stores/posts/post.js'
+import {useRoute} from 'vue-router'
+import {storeToRefs} from 'pinia'
+import {useAuthorStore} from '@/stores/posts/author.js'
+import {usePostStore} from '@/stores/posts/post.js'
 import Post from '@/components/posts/Post.vue'
 
 const route = useRoute()
-const { getPostAuthor } = storeToRefs(useAuthorStore())
-const { fetchAuthors} = useAuthorStore()
-const { post, loading, error } = storeToRefs(usePostStore())
-const { fetchPost } = usePostStore()
+const {getPostAuthor} = storeToRefs(useAuthorStore())
+const {fetchAuthors} = useAuthorStore()
+const {post, loading, error} = storeToRefs(usePostStore())
+const {fetchPost} = usePostStore()
 
 fetchAuthors()
 fetchPost(route.params.id)

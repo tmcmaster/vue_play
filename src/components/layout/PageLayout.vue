@@ -1,3 +1,41 @@
+<script>
+import PageHeader from './PageHeader.vue';
+import PageFooter from './PageFooter.vue';
+import PageBody from './PageBody.vue';
+import PageNavBar from "@/components/layout/PageNavBar.vue";
+
+export default {
+  name: "PageLayout",
+  components: {
+    PageNavBar,
+    PageHeader,
+    PageFooter,
+    PageBody
+  },
+  props: {
+    theme: {
+      type: Object,
+      default: () => ({
+        header: {
+          leftFlex: "1",
+          centerFlex: "2",
+          rightFlex: "1"
+        },
+        footer: {
+          leftFlex: "1",
+          centerFlex: "2",
+          rightFlex: "1"
+        }
+      })
+    },
+    fullScreen: { // Define the prop for controlling the width
+      type: Boolean,
+      default: false
+    }
+  }
+};
+</script>
+
 <template>
   <main :class="{ 'full-screen': fullScreen }">
     <article>
@@ -44,44 +82,6 @@
     </article>
   </main>
 </template>
-
-<script>
-import PageHeader from './PageHeader.vue';
-import PageFooter from './PageFooter.vue';
-import PageBody from './PageBody.vue';
-import PageNavBar from "@/components/layout/PageNavBar.vue";
-
-export default {
-  name: "PageLayout",
-  components: {
-    PageNavBar,
-    PageHeader,
-    PageFooter,
-    PageBody
-  },
-  props: {
-    theme: {
-      type: Object,
-      default: () => ({
-        header: {
-          leftFlex: "5",
-          centerFlex: "1",
-          rightFlex: "5"
-        },
-        footer: {
-          leftFlex: "1",
-          centerFlex: "2",
-          rightFlex: "1"
-        }
-      })
-    },
-    fullScreen: { // Define the prop for controlling the width
-      type: Boolean,
-      default: false
-    }
-  }
-};
-</script>
 
 <style scoped>
 

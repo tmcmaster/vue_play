@@ -1,10 +1,10 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { storeToRefs } from 'pinia'
-import { useAuthorStore } from '@/stores/posts/author.js'
+import {RouterLink} from 'vue-router'
+import {storeToRefs} from 'pinia'
+import {useAuthorStore} from '@/stores/posts/author.js'
 
-const { authors } = storeToRefs(useAuthorStore())
-const { fetchAuthors } = useAuthorStore()
+const {authors} = storeToRefs(useAuthorStore())
+const {fetchAuthors} = useAuthorStore()
 
 fetchAuthors()
 </script>
@@ -18,8 +18,12 @@ fetchAuthors()
 </template>
 
 <style scoped>
-  div {
-    padding: 16px;
-    box-sizing: border-box;
-  }
+div {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: center;
+}
 </style>

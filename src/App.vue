@@ -14,29 +14,29 @@ const pageTheme = {
 
 <template>
   <PageLayout :fullScreen="true" :theme="pageTheme">
-      <template v-slot:headerLeading>
-        <img alt="Vue logo" src="@/assets/logo.svg"/>
-      </template>
-      <template v-slot:header>
-        <h2>Posts and Todos</h2>
-      </template>
-      <template v-slot:headerTrailing>
-      </template>
-      <template v-slot:nav>
-        <nav>
-          <RouterLink to="/posts">Posts</RouterLink>
-          <RouterLink to="/authors">Authors</RouterLink>
-          <RouterLink to="/todos">Todos</RouterLink>
-          <RouterLink to="/">About</RouterLink>
-        </nav>
-      </template>
-      <template v-slot:mainBody>
-        <RouterView/>
-      </template>
-      <template v-slot:footer>
-        <CreatedWith/>
-      </template>
-    </PageLayout>
+    <template v-slot:headerLeading>
+      <img alt="Vue logo" src="@/assets/logo.svg"/>
+    </template>
+    <template v-slot:header>
+      <h2>Posts and Todos</h2>
+    </template>
+    <template v-slot:headerTrailing>
+    </template>
+    <template v-slot:nav>
+      <nav>
+        <RouterLink to="/posts">Posts</RouterLink>
+        <RouterLink to="/authors">Authors</RouterLink>
+        <RouterLink to="/todos">Todos</RouterLink>
+        <RouterLink to="/">About</RouterLink>
+      </nav>
+    </template>
+    <template v-slot:mainBody>
+      <RouterView/>
+    </template>
+    <template v-slot:footer>
+      <CreatedWith/>
+    </template>
+  </PageLayout>
 </template>
 
 <style scoped>
@@ -60,7 +60,7 @@ nav > * {
 }
 
 nav > :first-child {
-  padding-left:0;
+  padding-left: 0;
 }
 
 </style>

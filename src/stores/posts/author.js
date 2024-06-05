@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import { usePostStore } from './post.js'
+import {defineStore} from 'pinia'
+import {usePostStore} from './post.js'
 
 export const useAuthorStore = defineStore({
     id: 'author',

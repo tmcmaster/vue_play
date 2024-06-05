@@ -1,10 +1,10 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { storeToRefs } from 'pinia'
-import { usePostStore } from '@/stores/posts/post.js'
+import {RouterLink} from 'vue-router'
+import {storeToRefs} from 'pinia'
+import {usePostStore} from '@/stores/posts/post.js'
 
-const { posts, loading, error } = storeToRefs(usePostStore())
-const { fetchPosts } = usePostStore()
+const {posts, loading, error} = storeToRefs(usePostStore())
+const {fetchPosts} = usePostStore()
 
 fetchPosts()
 </script>
@@ -21,11 +21,12 @@ fetchPosts()
 </template>
 
 <style scoped>
-  main {
-    padding: 16px;
-    box-sizing: border-box;
-  }
-  div > p {
-    padding: 4px 16px 16px 16px;
-  }
+main {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+div > p {
+  padding: 4px 16px 16px 16px;
+}
 </style>
