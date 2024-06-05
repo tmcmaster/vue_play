@@ -150,6 +150,9 @@ main.full-screen > article {
   scrollbar-width: none;
 }
 
+.header {
+  padding-bottom: 1rem;
+}
 .footer {
   display: flex;
   padding: 10px;

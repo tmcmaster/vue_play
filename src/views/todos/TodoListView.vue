@@ -3,12 +3,16 @@ import {storeToRefs} from 'pinia'
 import {useTodoStore} from "@/stores/todos/todos.js";
 import PageLayout from '@/components/layout/PageLayout.vue'
 import TodoItem from '@/components/todos/TodoItem.vue'
+import TodoAddNew from "@/components/todos/TodoAddNew.vue";
 
 const todoStore = useTodoStore()
 const {todos} = storeToRefs(todoStore)
 
 const pageTheme = {
-  header: {},
+  header: {
+    leftFlex: "flex-start",
+    rightFlex: "flex-end"
+  },
   footer: {}
 };
 
@@ -17,14 +21,18 @@ const pageTheme = {
 <template>
 
   <PageLayout :theme="pageTheme">
-    <template v-slot:headerLeading></template>
+    <template v-slot:headerLeading>
+      <span class="total-count">Total: {{ todos.length }}</span>
+    </template>
     <template v-slot:header>
       <h2>Todo List</h2>
     </template>
     <template v-slot:headerTrailing>
-      <span>items: {{ todos.length }}</span>
+      <span>Incomplete: {{ todoStore.incompleteTaskCount }}</span>
     </template>
-    <template #nav></template>
+    <template v-slot:nav>
+      <TodoAddNew :onAddItem="(newItem) => todoStore.addNewTodo(newItem)"/>
+    </template>
     <template v-slot:mainBody>
       <main>
         <TodoItem
@@ -47,5 +55,4 @@ const pageTheme = {
 </template>
 
 <style scoped>
-
 </style>
