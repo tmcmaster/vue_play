@@ -5,15 +5,18 @@ import PageLayout from '@/components/layout/PageLayout.vue'
 import TodoItem from '@/components/todos/TodoItem.vue'
 import TodoAddNew from "@/components/todos/TodoAddNew.vue";
 
-const todoStore = useTodoStore()
+const todoStore = useTodoStore();
+
 const {todos} = storeToRefs(todoStore)
 
 const pageTheme = {
   header: {
+
+  },
+  footer: {
     leftFlex: "flex-start",
     rightFlex: "flex-end"
-  },
-  footer: {}
+  }
 };
 
 </script>
@@ -22,13 +25,13 @@ const pageTheme = {
 
   <PageLayout :theme="pageTheme">
     <template v-slot:headerLeading>
-      <span class="total-count">Total: {{ todos.length }}</span>
+
     </template>
     <template v-slot:header>
       <h2>Todo List</h2>
     </template>
     <template v-slot:headerTrailing>
-      <span>Incomplete: {{ todoStore.incompleteTaskCount }}</span>
+
     </template>
     <template v-slot:nav>
       <TodoAddNew :onAddItem="(newItem) => todoStore.addNewTodo(newItem)"/>
@@ -47,9 +50,15 @@ const pageTheme = {
             }"/>
       </main>
     </template>
-    <template v-slot:footerLeading></template>
-    <template v-slot:footer></template>
-    <template v-slot:footerTrailing></template>
+    <template v-slot:footerLeading>
+      <span>Incomplete: {{ todoStore.incompleteTaskCount }}</span>
+    </template>
+    <template v-slot:footer>
+      <span class="total-count">Total: {{ todos.length }}</span>
+    </template>
+    <template v-slot:footerTrailing>
+      <span>Completed: {{ todoStore.completedTaskCount }}</span>
+    </template>
   </PageLayout>
 
 </template>

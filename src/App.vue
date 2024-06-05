@@ -18,7 +18,7 @@ const pageTheme = {
       <img alt="Vue logo" src="@/assets/logo.svg"/>
     </template>
     <template v-slot:header>
-      <h2>Posts and Todos</h2>
+      <h2>Playing with Vue JS</h2>
     </template>
     <template v-slot:headerTrailing>
     </template>

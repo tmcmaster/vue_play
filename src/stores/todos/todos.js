@@ -7,13 +7,19 @@ export const useTodoStore = defineStore({
         const todos = Array.from({length: numberToGenerate},
             (_, index) => ({id: index + 1, title: `Todo ${index + 1}`, done: false}));
         return {
+            deleted: [],
             todos: todos,
             nextId: numberToGenerate + 1,
+            showDeleted: false,
+            showCompleted: false,
         }
     },
     getters: {
         incompleteTaskCount() {
             return this.todos.filter(todo => !todo.done).length;
+        },
+        completedTaskCount() {
+            return this.todos.filter(todo => todo.done).length;
         }
     },
     actions: {
