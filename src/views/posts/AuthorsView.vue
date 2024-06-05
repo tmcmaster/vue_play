@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { useAuthorStore } from '../stores/author'
+import { useAuthorStore } from '@/stores/posts/author.js'
 
 const { authors } = storeToRefs(useAuthorStore())
 const { fetchAuthors } = useAuthorStore()

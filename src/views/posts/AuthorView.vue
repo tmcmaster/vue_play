@@ -2,9 +2,9 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { useAuthorStore } from '../stores/author'
-import { usePostStore } from '../stores/post'
-import Author from '../components/Author.vue'
+import { useAuthorStore } from '@/stores/posts/author.js'
+import { usePostStore } from '@/stores/posts/post.js'
+import Author from '@/components/posts/Author.vue'
 
 const route = useRoute()
 const { authors } = storeToRefs(useAuthorStore())
